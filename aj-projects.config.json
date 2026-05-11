@@ -1,0 +1,116 @@
+{
+  "$schema": "./aj-projects.config.schema.json",
+  "_comment": "Central identity + integration config consumed by every reworked skill in Phase 2. Fill in real values per environment. NEVER commit real secrets — put real values into .env (gitignored) and let each skill read from there.",
+  "organization": {
+    "name": "AJ Projects",
+    "domain": "theajprojects.com",
+    "primary_github_org": "jackie-lgtm"
+  },
+  "team": [
+    {
+      "id": "jackie",
+      "display_name": "Jackie Martinez",
+      "role": "Founder / Operator",
+      "email": "jackie@theajprojects.com",
+      "github_username": "jackie-lgtm",
+      "is_admin": true
+    },
+    {
+      "id": "austin",
+      "display_name": "Austin",
+      "role": "TODO: confirm role with Jackie",
+      "email": "Austin@theajprojects.com",
+      "github_username": "TODO_GITHUB_USERNAME",
+      "is_admin": false
+    },
+    {
+      "id": "celestial",
+      "display_name": "Celestial",
+      "role": "TODO: confirm role with Jackie",
+      "email": "celestial@theajprojects.com",
+      "github_username": "TODO_GITHUB_USERNAME",
+      "is_admin": false
+    }
+  ],
+  "integrations_required": {
+    "_comment": "Phase 2 will read this map to know which integrations each skill needs and which env vars to template into .env.example. Don't put real keys here.",
+    "anthropic": {
+      "env_var": "ANTHROPIC_API_KEY",
+      "where_to_get": "https://console.anthropic.com/settings/keys",
+      "needed_by_categories": ["AI & Agents"]
+    },
+    "openai": {
+      "env_var": "OPENAI_API_KEY",
+      "where_to_get": "https://platform.openai.com/api-keys",
+      "needed_by_categories": ["AI & Agents", "Media", "Audio"]
+    },
+    "gemini": {
+      "env_var": "GEMINI_API_KEY",
+      "where_to_get": "https://aistudio.google.com/apikey",
+      "needed_by_categories": ["AI & Agents"]
+    },
+    "elevenlabs": {
+      "env_var": "ELEVENLABS_API_KEY",
+      "where_to_get": "https://elevenlabs.io/app/settings/api-keys",
+      "needed_by_categories": ["Audio"]
+    },
+    "figma": {
+      "env_var": "FIGMA_PERSONAL_ACCESS_TOKEN",
+      "where_to_get": "https://www.figma.com/settings -> Personal access tokens",
+      "needed_by_categories": ["Design"]
+    },
+    "notion": {
+      "env_var": "NOTION_API_KEY",
+      "where_to_get": "https://www.notion.so/profile/integrations",
+      "needed_by_categories": ["Workspace", "Productivity"]
+    },
+    "supabase": {
+      "env_vars": ["SUPABASE_URL", "SUPABASE_ANON_KEY", "SUPABASE_SERVICE_ROLE_KEY"],
+      "where_to_get": "https://supabase.com -> your project -> Settings -> API",
+      "needed_by_categories": ["Engineering"]
+    },
+    "n8n": {
+      "env_var": "N8N_API_KEY",
+      "where_to_get": "Your n8n instance -> Settings -> n8n API",
+      "needed_by_categories": ["Automation"]
+    },
+    "apify": {
+      "env_var": "APIFY_TOKEN",
+      "where_to_get": "https://console.apify.com/account/integrations",
+      "needed_by_categories": ["Marketing", "Sales"]
+    },
+    "google_workspace": {
+      "env_var": "GOOGLE_OAUTH_CLIENT_ID",
+      "where_to_get": "https://console.cloud.google.com -> APIs & Services -> Credentials -> OAuth 2.0 Client IDs",
+      "needed_by_categories": ["Workspace"]
+    },
+    "stripe": {
+      "env_var": "STRIPE_SECRET_KEY",
+      "where_to_get": "https://dashboard.stripe.com/apikeys",
+      "needed_by_categories": ["Finance"]
+    },
+    "salesforce": {
+      "env_vars": ["SFDC_LOGIN_URL", "SFDC_USERNAME", "SFDC_PASSWORD", "SFDC_SECURITY_TOKEN"],
+      "where_to_get": "Salesforce Setup -> Identity -> My Profile -> Reset Security Token",
+      "needed_by_categories": ["Sales", "Platform"]
+    }
+  },
+  "mcp_servers_required": {
+    "_comment": "MCP servers each category of skill expects to be available. Verify these are configured in ~/.claude.json (Claude Code's MCP server list) before adopting skills that need them.",
+    "github": "official @anthropic/github-mcp",
+    "notion": "official Notion MCP",
+    "supabase": "official Supabase MCP",
+    "figma": "official Figma MCP",
+    "google_workspace": "official Google Workspace MCP",
+    "monday": "if Sales/Ops skills need Monday boards",
+    "atlassian": "if Jira/Confluence skills are adopted"
+  },
+  "phase_2_priority_categories": [
+    "Sales",
+    "Marketing",
+    "Workspace",
+    "AI & Agents",
+    "Design",
+    "Automation"
+  ]
+}

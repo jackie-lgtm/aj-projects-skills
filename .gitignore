@@ -1,0 +1,25 @@
+# Never commit real secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Build artifacts from local Phase 1/2 scripts
+sources/
+*.tsv
+clone-failed.txt
+clone.log
+node_modules/
+
+# Generated logs
+*.log

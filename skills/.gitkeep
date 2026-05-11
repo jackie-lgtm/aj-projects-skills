@@ -1,0 +1,8 @@
+# This directory will be populated as Phase 2 promotes individual skills
+# from SKILLS_CATALOG.md into fully reworked, AJ-Projects-ready skill bundles.
+#
+# Structure (when populated):
+#   skills/<category>/<skill-slug>/SKILL.md
+#   skills/<category>/<skill-slug>/SETUP.md
+#   skills/<category>/<skill-slug>/.env.example
+#   skills/<category>/<skill-slug>/PROVENANCE.md
