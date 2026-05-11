@@ -129,11 +129,17 @@ When a Phase 2 rework needs a new shared piece of identity or integration metada
 
 ## Tracking Phase 2 progress
 
-| Skill | Category | Status | Promoted by | Date |
-|---|---|---|---|---|
-| `claude-mem` | memory | ✅ Promoted (Phase 1.5) | Jackie/Claude | 2026-05-11 |
-| `ghl` + `ghl-mcp` | automation | 🔨 Scaffold shipped (Phase 1.5) | Jackie/Claude | 2026-05-11 |
-| 43 × `gws-*` (full Workspace) | workspace | ✅ **Promoted (Phase 2 Batch 1)** | Jackie/Claude | 2026-05-11 |
+| Skill bundle | Category | Status | Date |
+|---|---|---|---|
+| `claude-mem` | memory | ✅ Phase 1.5 | 2026-05-11 |
+| `ghl` + `ghl-mcp` | automation | 🔨 Scaffold (Phase 1.5) | 2026-05-11 |
+| 43 × `gws-*` | workspace | ✅ **v1.0.0-workspace** (Batch 1) | 2026-05-11 |
+| 630 sales skills (7 repos) | sales | ✅ **v1.1.0-sales** (Batch 2a) | 2026-05-11 |
+| 1,238 marketing skills (8 repos) | marketing | ✅ **v1.2.0-marketing** (Batch 2b) | 2026-05-11 |
+| 152 automation skills (4 repos) | automation | ✅ **v1.3.0-automation** (Batch 2c) | 2026-05-11 |
+| 148 design skills (7 repos) | design | ✅ **v1.4.0-design** (Batch 2d) | 2026-05-11 |
+
+**Total live as of v1.4.0-design: 2,212 skills across 6 categories.**
 
 Add a row to this table for every newly promoted skill.
 

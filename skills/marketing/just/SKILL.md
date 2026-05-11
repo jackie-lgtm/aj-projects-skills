@@ -1,0 +1,68 @@
+---
+name: just
+description: ">-"
+usage_tags: [marketing,content,copy,growth,just,marketing]
+cost_badge: FREE
+always_load: false
+source_repo: https://github.com/terminalskills/skills
+source_skill_path: skills/just/SKILL.md
+license: see source_repo
+category: marketing
+---
+
+
+# just
+
+## Overview
+just is a command runner — like make but without the build system baggage. Define commands in a justfile, run with just <command>.
+
+## Instructions
+
+### Step 1: Install
+```bash
+brew install just
+```
+
+### Step 2: Justfile
+```makefile
+# justfile — Project commands
+set dotenv-load
+
+default: dev
+
+dev:
+    npm run dev
+
+test *args:
+    npm test {{args}}
+
+build:
+    npm run build
+
+db-reset: && db-migrate db-seed
+    npx prisma migrate reset --force
+
+db-migrate:
+    npx prisma migrate deploy
+
+db-seed:
+    npx prisma db seed
+
+deploy env="staging":
+    echo "Deploying to {{env}}..."
+    npx vercel deploy
+
+up:
+    docker compose up -d
+
+down:
+    docker compose down
+
+logs service="app":
+    docker compose logs -f {{service}}
+```
+
+## Guidelines
+- Unlike make, just doesn't track file dependencies — purely a command runner.
+- Supports arguments with defaults: deploy env="staging".
+- just --list shows all available commands.

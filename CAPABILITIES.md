@@ -25,21 +25,21 @@ The master "what does this repo do?" reference. Updated whenever a skill is prom
 | 7 | Video Creation/Editing | 30+ | 0 | mix LOCAL / PAID | ⏳ Free stack ready |
 | 8 | Image Generation | 25+ | 0 | mix FREE-TIER / PAID | ⏳ Free stack ready |
 | 9 | Audio (TTS/STT/Music) | 5+ | 0 | BYO-API ElevenLabs | ⏳ |
-| 10 | Sales Workflows | 60+ | 0 | mix | ⏳ |
-| 11 | Marketing & Copy | 50+ | 0 | mix | ⏳ |
-| 12 | Design (Figma, Stitch, shadcn) | 15+ | 0 | mix OAUTH/FREE | ⏳ |
+| 10 | Sales Workflows | 60+ | **630** ✅ | mix (mostly FREE prompts) | ✅ **Live (Batch 2a)** |
+| 11 | Marketing & Copy | 50+ | **1,238** ✅ | mix (mostly FREE prompts) | ✅ **Live (Batch 2b)** |
+| 12 | Design (Figma, Stitch, shadcn) | 15+ | **148** ✅ | mix OAUTH/FREE | ✅ **Live (Batch 2d)** |
 | 13 | Engineering Patterns | 200+ | 0 | LOCAL | ⏳ Library-only candidate |
-| 14 | Automation (n8n, Zapier) | 5 n8n core | 0 | BYO-API | ⏳ |
+| 14 | Automation (n8n, GHL, Apify) | 10+ | **152** ✅ | mix BYO-API/FREE | ✅ **Live (Batch 2c)** |
 | 15 | Productivity & Planning | 30+ | 0 | LOCAL | ⏳ |
 | 16 | Security & Auth | 20+ | 0 | LOCAL | ⏳ |
 | 17 | AI & Agents (LLM APIs) | 8 | 0 | BYO-API | ⏳ |
 
 **Phase 2 Batch 1 (Google Workspace) — shipped.** 43 `gws-*` skills now live under `skills/workspace/` with shared OAuth setup at `skills/workspace/_shared/SETUP.md`. One-time `gws auth login` activates the whole category.
 
-**Status as of v1.0.0-workspace tag:**
-- ✅ 45 skills live (claude-mem, ghl scaffold, 43 gws-*)
-- 🔨 1 MCP server (ghl-mcp scaffold)
-- ⏳ ~8,370 skills still in catalog awaiting promotion
+**Status as of v1.4.0-design tag (Phase 2 Batch 2 complete):**
+- ✅ **2,213+ skills live** across 6 categories (claude-mem, ghl, 43 gws-*, 630 sales, 1,238 marketing, 152 automation, 148 design)
+- 🔨 1 MCP server live (ghl-mcp scaffold)
+- ⏳ ~6,200 skills still in catalog awaiting future promotion (Engineering, Productivity, Security, AI/Agents, Audio, Media, Notion, Obsidian, Scraping)
 
 ---
 
