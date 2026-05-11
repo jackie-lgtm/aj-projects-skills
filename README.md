@@ -21,8 +21,11 @@ That's it. You do not need to read anything else first.
 | File / folder | Purpose |
 |---|---|
 | [`QUICKSTART.md`](./QUICKSTART.md) | **Start here.** 5-step setup for non-coders. |
+| [`CAPABILITIES.md`](./CAPABILITIES.md) | **What this library can do.** Master matrix: every category × every skill × status (✅/⏳/🔨/❌) × cost (FREE/PAID/etc). Read this to know what's possible. |
+| [`COVERAGE_AUDIT.md`](./COVERAGE_AUDIT.md) | Per-category coverage with free-vs-paid analysis. Companion to CAPABILITIES.md. |
 | [`ONBOARDING.md`](./ONBOARDING.md) | The Claude Code prompt that does the guided install. QUICKSTART tells you when to paste it. |
-| [`skills/`](./skills/) | The active, AJ-Projects-reworked skills you'll actually install. Phase 1.5 ships with `memory/claude-mem`. Phase 2 adds more. |
+| [`skills/`](./skills/) | The active, AJ-Projects-reworked skills you'll actually install. Phase 1.5 ships with `memory/claude-mem` and `automation/ghl`. Phase 2 adds more. |
+| [`mcp-servers/`](./mcp-servers/) | In-house MCP servers built for AJ Projects. Currently: `ghl-mcp/` (GoHighLevel Agency-tier wrapper). |
 | [`hooks/session-start-skill-router.sh`](./hooks/session-start-skill-router.sh) | Auto-detects which installed skills are relevant to your current session based on what you're working on. Installed into `~/.claude/hooks/` by the onboarding flow. |
 | [`scripts/install.sh`](./scripts/install.sh) | Shell-only installer (fallback for when Claude Code isn't available or you want non-interactive setup). |
 | [`aj-projects.config.json`](./aj-projects.config.json) | Central config: team identities, integration requirements, MCP server expectations. |
