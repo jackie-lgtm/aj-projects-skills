@@ -18,7 +18,7 @@ The master "what does this repo do?" reference. Updated whenever a skill is prom
 |---|---|---:|---:|---|---|
 | 1 | Memory & Context | 8+ | 1 (claude-mem) | LOCAL | ✅ Solid |
 | 2 | GoHighLevel | 0 (built in-house) | 1 (ghl) 🔨 | FREE (with GHL sub) | 🔨 Building |
-| 3 | Google Workspace | 93 | 0 | OAUTH | ⏳ Ready to promote |
+| 3 | Google Workspace | 93 | **43** ✅ | OAUTH | ✅ **Live (Phase 2 Batch 1)** |
 | 4 | Notion | 3 + existing MCP | 0 | OAUTH | ⏳ Ready to promote |
 | 5 | Obsidian | 7 | 0 | LOCAL | ⏳ Ready to promote |
 | 6 | Scraping & Research | 25+ | 0 | mix FREE-TIER / PAID | ⏳ Ready to promote |
@@ -34,7 +34,12 @@ The master "what does this repo do?" reference. Updated whenever a skill is prom
 | 16 | Security & Auth | 20+ | 0 | LOCAL | ⏳ |
 | 17 | AI & Agents (LLM APIs) | 8 | 0 | BYO-API | ⏳ |
 
-**Phase 1.5 status:** 1 skill live (claude-mem), 1 skill + MCP server building (GHL). Everything else is cataloged and waiting for Phase 2 promotion.
+**Phase 2 Batch 1 (Google Workspace) — shipped.** 43 `gws-*` skills now live under `skills/workspace/` with shared OAuth setup at `skills/workspace/_shared/SETUP.md`. One-time `gws auth login` activates the whole category.
+
+**Status as of v1.0.0-workspace tag:**
+- ✅ 45 skills live (claude-mem, ghl scaffold, 43 gws-*)
+- 🔨 1 MCP server (ghl-mcp scaffold)
+- ⏳ ~8,370 skills still in catalog awaiting promotion
 
 ---
 
@@ -95,29 +100,34 @@ What this gives you: Gmail (read/send/triage/reply/auto-forward), Docs, Sheets, 
 
 | Skill | Status | Cost | Setup | Notes |
 |---|---|---|---|---|
-| `gws-gmail` | ⏳ Promotable | OAUTH | 🟡 one-time OAuth per user | The core Gmail surface |
-| `gws-gmail-triage` | ⏳ Promotable | OAUTH | — | Auto-label inbox |
-| `gws-gmail-reply` / `gws-gmail-reply-all` | ⏳ Promotable | OAUTH | — | Drafted replies |
-| `gws-gmail-send` | ⏳ Promotable | OAUTH | — | Send new emails |
-| `gws-gmail-forward` | ⏳ Promotable | OAUTH | — | |
-| `gws-gmail-watch` | ⏳ Promotable | OAUTH | — | Inbox change notifications |
-| `gws-docs` / `gws-docs-write` | ⏳ Promotable | OAUTH | — | Full Google Docs |
-| `gws-sheets` / `gws-sheets-read` / `gws-sheets-append` | ⏳ Promotable | OAUTH | — | Full Sheets |
-| `gws-drive` / `gws-drive-upload` | ⏳ Promotable | OAUTH | — | File management |
-| `gws-calendar` / `gws-calendar-insert` / `gws-calendar-agenda` | ⏳ Promotable | OAUTH | — | Calendar |
-| `gws-meet` | ⏳ Promotable | OAUTH | — | Meet spaces |
-| `gws-slides` | ⏳ Promotable | OAUTH | — | Build decks |
-| `gws-tasks` | ⏳ Promotable | OAUTH | — | Google Tasks |
-| `gws-forms` | ⏳ Promotable | OAUTH | — | |
-| `gws-keep` | ⏳ Promotable | OAUTH | — | Google Keep notes |
-| `gws-chat` / `gws-chat-send` | ⏳ Promotable | OAUTH | — | Google Chat |
-| `gws-people` | ⏳ Promotable | OAUTH | — | Contacts API |
-| `gws-script` / `gws-script-push` | ⏳ Promotable | OAUTH | — | Google Apps Script automation |
-| `gws-shared` | ⏳ Promotable | OAUTH | — | Shared drives |
-| **Recipes** (47 of them) | ⏳ Promotable | OAUTH | — | Pre-built workflows (see catalog) |
-| **Personas** (11 of them) | ⏳ Promotable | OAUTH | — | Role-based wrappers |
+| `gws-gmail` | ✅ Live | OAUTH | 🟡 one-time OAuth per user | The core Gmail surface |
+| `gws-gmail-triage` | ✅ Live | OAUTH | — | Auto-label inbox |
+| `gws-gmail-reply` / `gws-gmail-reply-all` | ✅ Live | OAUTH | — | Drafted replies |
+| `gws-gmail-send` | ✅ Live | OAUTH | — | Send new emails |
+| `gws-gmail-forward` | ✅ Live | OAUTH | — | |
+| `gws-gmail-watch` | ✅ Live | OAUTH | — | Inbox change notifications |
+| `gws-docs` / `gws-docs-write` | ✅ Live | OAUTH | — | Full Google Docs |
+| `gws-sheets` / `gws-sheets-read` / `gws-sheets-append` | ✅ Live | OAUTH | — | Full Sheets |
+| `gws-drive` / `gws-drive-upload` | ✅ Live | OAUTH | — | File management |
+| `gws-calendar` / `gws-calendar-insert` / `gws-calendar-agenda` | ✅ Live | OAUTH | — | Calendar |
+| `gws-meet` | ✅ Live | OAUTH | — | Meet spaces |
+| `gws-slides` | ✅ Live | OAUTH | — | Build decks |
+| `gws-tasks` | ✅ Live | OAUTH | — | Google Tasks |
+| `gws-forms` | ✅ Live | OAUTH | — | |
+| `gws-keep` | ✅ Live | OAUTH | — | Google Keep notes |
+| `gws-chat` / `gws-chat-send` | ✅ Live | OAUTH | — | Google Chat |
+| `gws-people` | ✅ Live | OAUTH | — | Contacts API |
+| `gws-script` / `gws-script-push` | ✅ Live | OAUTH | — | Google Apps Script automation |
+| `gws-shared` | ✅ Live | OAUTH | — | Shared drives |
+| **Workflows** (gws-workflow + 6 variants) | ✅ Live | OAUTH | — | email-to-task, file-announce, meeting-prep, standup-report, weekly-digest |
+| **Events** (gws-events + renew + subscribe) | ✅ Live | OAUTH | — | Webhook subscriptions for real-time Workspace events |
+| **Model Armor** (gws-modelarmor + 3 variants) | ✅ Live | OAUTH | — | Content safety/sanitization for prompts and responses |
+| **Admin Reports** (gws-admin-reports) | ✅ Live | OAUTH | — | Workspace admin audit logs |
+| **Classroom** (gws-classroom) | ✅ Live | OAUTH | — | Google Classroom API |
+| **Recipes** (47 in catalog) | ⏳ Promotable | OAUTH | — | Pre-built one-shot workflows. Can be promoted as a separate sub-batch. |
+| **Personas** (11 in catalog) | ⏳ Promotable | OAUTH | — | Role-based wrappers (e.g., persona-sales-ops). Can be promoted as a separate sub-batch. |
 
-**Verdict: ⏳ Exceptional coverage already cataloged. Phase 2 Batch 1 promotes ~10 core skills.**
+**Verdict: ✅ Phase 2 Batch 1 SHIPPED — 43 gws-* skills live under `skills/workspace/`. One-time `gws auth login` activates the whole category. Recipes + Personas remain in catalog (~58 more skills) — promote in a future sub-batch if needed.**
 
 ---
 

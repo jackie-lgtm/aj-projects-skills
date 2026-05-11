@@ -132,5 +132,44 @@ When a Phase 2 rework needs a new shared piece of identity or integration metada
 | Skill | Category | Status | Promoted by | Date |
 |---|---|---|---|---|
 | `claude-mem` | memory | ✅ Promoted (Phase 1.5) | Jackie/Claude | 2026-05-11 |
+| `ghl` + `ghl-mcp` | automation | 🔨 Scaffold shipped (Phase 1.5) | Jackie/Claude | 2026-05-11 |
+| 43 × `gws-*` (full Workspace) | workspace | ✅ **Promoted (Phase 2 Batch 1)** | Jackie/Claude | 2026-05-11 |
 
 Add a row to this table for every newly promoted skill.
+
+## Phase 2 Batch 1 — Google Workspace (shipped)
+
+Released as **`v1.0.0-workspace`** tag.
+
+| Sub-group | Skills | Count |
+|---|---|---|
+| Gmail | gmail, read, send, reply, reply-all, forward, triage, watch | 8 |
+| Docs | docs, docs-write | 2 |
+| Sheets | sheets, sheets-read, sheets-append | 3 |
+| Drive | drive, drive-upload, shared | 3 |
+| Calendar | calendar, calendar-insert, calendar-agenda | 3 |
+| Communication | meet, chat, chat-send | 3 |
+| Content | slides, forms, keep | 3 |
+| Productivity | tasks, people | 2 |
+| Automation | script, script-push, classroom, admin-reports | 4 |
+| Events (webhooks) | events, events-renew, events-subscribe | 3 |
+| Model Armor (safety) | modelarmor, create-template, sanitize-prompt, sanitize-response | 4 |
+| Workflows | workflow, email-to-task, file-announce, meeting-prep, standup-report, weekly-digest | 6 |
+| **Total** | | **43** |
+
+Shared setup at `skills/workspace/_shared/SETUP.md`. One-time `gws auth login` per user covers all 43.
+
+**Still in catalog (deferred to a future sub-batch):**
+- 47 Workspace recipes (`recipe-*`)
+- 11 Workspace personas (`persona-*`)
+
+## Phase 2 Batch 2 candidates (next session)
+
+Per the roadmap order:
+
+1. **Obsidian + Notion** — 7 Obsidian + 3 Notion = 10 skills. FREE LOCAL + OAUTH. Easy win, daily use.
+2. **AI & Agents foundations** — claude-api, gemini-api-dev, mcp-server-patterns. Foundational for downstream work.
+3. **Sales** — top 10 by relevance to AJ Projects sales pipeline.
+4. **Marketing** — top 10 by relevance to content/outreach.
+
+Tell me which batch to do next.
