@@ -19,8 +19,8 @@ The master "what does this repo do?" reference. Updated whenever a skill is prom
 | 1 | Memory & Context | 8+ | 1 (claude-mem) | LOCAL | ✅ Solid |
 | 2 | GoHighLevel | 0 (built in-house) | 1 (ghl) 🔨 | FREE (with GHL sub) | 🔨 Building |
 | 3 | Google Workspace | 93 | **43** ✅ | OAUTH | ✅ **Live (Phase 2 Batch 1)** |
-| 4 | Notion | 3 + existing MCP | 0 | OAUTH | ⏳ Ready to promote |
-| 5 | Obsidian | 7 | 0 | LOCAL | ⏳ Ready to promote |
+| 4 | Notion | 3 + existing MCP | **(in notes/)** ✅ | OAUTH | ✅ **Live in notes/ category** |
+| 5 | Obsidian | 7 | **(in notes/)** ✅ | LOCAL | ✅ **Live in notes/ category** |
 | 6 | Scraping & Research | 25+ | 0 | mix FREE-TIER / PAID | ⏳ Ready to promote |
 | 7 | Video Creation/Editing | 30+ | 0 | mix LOCAL / PAID | ⏳ Free stack ready |
 | 8 | Image Generation | 25+ | 0 | mix FREE-TIER / PAID | ⏳ Free stack ready |
@@ -36,10 +36,12 @@ The master "what does this repo do?" reference. Updated whenever a skill is prom
 
 **Phase 2 Batch 1 (Google Workspace) — shipped.** 43 `gws-*` skills now live under `skills/workspace/` with shared OAuth setup at `skills/workspace/_shared/SETUP.md`. One-time `gws auth login` activates the whole category.
 
-**Status as of v1.4.0-design tag (Phase 2 Batch 2 complete):**
-- ✅ **2,213+ skills live** across 6 categories (claude-mem, ghl, 43 gws-*, 630 sales, 1,238 marketing, 152 automation, 148 design)
+**Status as of v1.5.0-cleanup-notes tag (Phase 2 Mega-Batch + Light Cleanup):**
+- ✅ **2,163 skills live** across 7 categories (1 memory + 43 workspace + 622 sales + 1,194 marketing + 152 automation + 141 design + 10 notes)
 - 🔨 1 MCP server live (ghl-mcp scaffold)
-- ⏳ ~6,200 skills still in catalog awaiting future promotion (Engineering, Productivity, Security, AI/Agents, Audio, Media, Notion, Obsidian, Scraping)
+- 🧹 Light-touch cleanup applied: 55 duplicates resolved, 4 low-quality entries removed
+- 🆕 New `notes/` category for Obsidian + Notion alongside existing claude-mem auto-capture
+- ⏳ ~6,200 skills still in catalog awaiting future promotion (Engineering, Productivity, Security, AI/Agents, Audio, Media, Scraping)
 
 ---
 
