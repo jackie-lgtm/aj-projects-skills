@@ -1,0 +1,29 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    { "query": "tag:#person",   "color": { "a": 1, "rgb": 15485369 } },
+    { "query": "tag:#project",  "color": { "a": 1, "rgb": 3910911  } },
+    { "query": "tag:#decision", "color": { "a": 1, "rgb": 16097819 } },
+    { "query": "tag:#concept",  "color": { "a": 1, "rgb": 1099417  } },
+    { "query": "tag:#task",     "color": { "a": 1, "rgb": 16348438 } },
+    { "query": "tag:#learning", "color": { "a": 1, "rgb": 9135094  } }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.518,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 1,
+  "close": false
+}

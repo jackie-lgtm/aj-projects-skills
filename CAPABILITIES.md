@@ -20,14 +20,14 @@ The master "what does this repo do?" reference. Updated whenever a skill is prom
 | 2 | GoHighLevel | 0 (built in-house) | 1 (ghl) 🔨 | FREE (with GHL sub) | 🔨 Building |
 | 3 | Google Workspace | 93 | **43** ✅ | OAUTH | ✅ **Live (Phase 2 Batch 1)** |
 | 4 | Notion | 3 + existing MCP | **(in notes/)** ✅ | OAUTH | ✅ **Live in notes/ category** |
-| 5 | Obsidian | 7 | **(in notes/)** ✅ | LOCAL | ✅ **Live in notes/ category** |
+| 5 | Obsidian + Second-Brain Pro | 7 + 1 | **(in notes/ — 11 skills)** ✅ | LOCAL+OPTIONAL_OAUTH | ✅ **Live in notes/ category** |
 | 6 | Scraping & Research | 25+ | 0 | mix FREE-TIER / PAID | ⏳ Ready to promote |
 | 7 | Video Creation/Editing | 30+ | 0 | mix LOCAL / PAID | ⏳ Free stack ready |
 | 8 | Image Generation | 25+ | 0 | mix FREE-TIER / PAID | ⏳ Free stack ready |
 | 9 | Audio (TTS/STT/Music) | 5+ | 0 | BYO-API ElevenLabs | ⏳ |
 | 10 | Sales Workflows | 60+ | **630** ✅ | mix (mostly FREE prompts) | ✅ **Live (Batch 2a)** |
 | 11 | Marketing & Copy | 50+ | **1,238** ✅ | mix (mostly FREE prompts) | ✅ **Live (Batch 2b)** |
-| 12 | Design (Figma, Stitch, shadcn) | 15+ | **148** ✅ | mix OAUTH/FREE | ✅ **Live (Batch 2d)** |
+| 12 | Design (Figma, Stitch, shadcn, **open-design**) | 15+ | **253** ✅ | mix OAUTH/FREE | ✅ **Live (Batch 2d + v1.6.0)** |
 | 13 | Engineering Patterns | 200+ | 0 | LOCAL | ⏳ Library-only candidate |
 | 14 | Automation (n8n, GHL, Apify) | 10+ | **152** ✅ | mix BYO-API/FREE | ✅ **Live (Batch 2c)** |
 | 15 | Productivity & Planning | 30+ | 0 | LOCAL | ⏳ |
@@ -36,12 +36,13 @@ The master "what does this repo do?" reference. Updated whenever a skill is prom
 
 **Phase 2 Batch 1 (Google Workspace) — shipped.** 43 `gws-*` skills now live under `skills/workspace/` with shared OAuth setup at `skills/workspace/_shared/SETUP.md`. One-time `gws auth login` activates the whole category.
 
-**Status as of v1.5.0-cleanup-notes tag (Phase 2 Mega-Batch + Light Cleanup):**
-- ✅ **2,163 skills live** across 7 categories (1 memory + 43 workspace + 622 sales + 1,194 marketing + 152 automation + 141 design + 10 notes)
+**Status as of v1.6.0 tag (open-design + obsidian-second-brain-pro added):**
+- ✅ **2,276 skills live** across 7 categories
 - 🔨 1 MCP server live (ghl-mcp scaffold)
-- 🧹 Light-touch cleanup applied: 55 duplicates resolved, 4 low-quality entries removed
-- 🆕 New `notes/` category for Obsidian + Notion alongside existing claude-mem auto-capture
-- ⏳ ~6,200 skills still in catalog awaiting future promotion (Engineering, Productivity, Security, AI/Agents, Audio, Media, Scraping)
+- 🆕 v1.6.0 additions:
+  - obsidian-second-brain-pro (with notion_sync.py + setup_color_graph.py + Hermes adapter) added to notes/
+  - 112 new design skills from open-design pack (frame-*, fal-*, gsap-*, swiss templates, deck-*, social-*, venice-*, swiftui-design, threejs, etc.) — 21 deduped against existing
+- ⏳ ~6,200 skills still in catalog awaiting future promotion
 
 ---
 
