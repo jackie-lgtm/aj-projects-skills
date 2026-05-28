@@ -157,4 +157,29 @@ if [ -n "$sorted" ]; then
   msg="$msg | Suggested for this session: $sug"
 fi
 
+# ---------------------------------------------------------------------------
+# Update-availability nudge (Option B)
+# Once per 24 hours, check if the AJ Projects repo has new commits and nudge
+# the user to run `bash ~/aj-projects-skills/scripts/update.sh`.
+# This is best-effort: if anything fails, we silently skip.
+# ---------------------------------------------------------------------------
+REPO_DIR="${HOME}/aj-projects-skills"
+NUDGE_CACHE="${HOME}/.claude/.aj-update-check"
+NOW_EPOCH=$(date +%s 2>/dev/null || echo 0)
+LAST_CHECK=0
+if [ -f "$NUDGE_CACHE" ]; then
+  LAST_CHECK=$(cat "$NUDGE_CACHE" 2>/dev/null || echo 0)
+fi
+# 86400 = 24 hours
+if [ -d "$REPO_DIR/.git" ] && [ $((NOW_EPOCH - LAST_CHECK)) -ge 86400 ] && command -v git >/dev/null 2>&1; then
+  # Check remote without modifying local state (timeout 5s to avoid blocking)
+  if remote_sha=$(timeout 5 git -C "$REPO_DIR" ls-remote origin HEAD 2>/dev/null | awk '{print $1}'); then
+    local_sha=$(git -C "$REPO_DIR" rev-parse HEAD 2>/dev/null || echo "")
+    if [ -n "$remote_sha" ] && [ -n "$local_sha" ] && [ "$remote_sha" != "$local_sha" ]; then
+      msg="$msg | 📦 Updates available — run: bash ~/aj-projects-skills/scripts/update.sh"
+    fi
+  fi
+  echo "$NOW_EPOCH" > "$NUDGE_CACHE" 2>/dev/null || true
+fi
+
 printf '{"status":"ok","message":"%s","suppressOutput":false}\n' "$msg"
